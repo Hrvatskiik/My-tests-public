@@ -1,10 +1,12 @@
+
+
 local wrong_password = false
 local correct_password = false
 local wrong_password_handle = ""
 
 
 local function check()
-	print("Checking Password...")
+	
 if password == "hello" then
 correct_password =  true
 wrong_password = false
