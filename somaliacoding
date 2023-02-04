@@ -1,1 +1,27 @@
-print("omg why not")
+local wrong = false
+local correct = false
+local wrong_handle = ""
+local correct_handle = ""
+
+local function check()
+	print("Checking...")
+	if _G.Password == "123" then
+		correct_handle = _G.Password
+		correct =  true
+		elseif _G.Password ~= "123" then
+			wrong =  true
+			wrong_handle = _G.Password
+	end
+end
+
+local function action()
+	if correct == true then
+		print("Your password is correct: " .. correct_handle)
+		elseif wrong == true then
+			print("Your password is incorrect: " .. wrong_handle)
+		end
+	end
+	
+	check()
+	wait(1)
+	action()
